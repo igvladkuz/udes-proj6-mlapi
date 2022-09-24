@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+APPNAME="ik-udes-proj6"
 PORT=443
 echo "Port: $PORT"
 
@@ -25,5 +25,5 @@ curl -d '{
    }
 }'\
      -H "Content-Type: application/json" \
-     -X POST https://<yourappname>.azurewebsites.net:$PORT/predict 
+     -X POST https://$APPNAME.azurewebsites.net:$PORT/predict 
      #your application name <yourappname>goes here

@@ -6,6 +6,8 @@ import pandas as pd
 import joblib
 from sklearn.preprocessing import StandardScaler
 
+PORT = 8000
+
 app = Flask(__name__)
 LOG = create_logger(app)
 LOG.setLevel(logging.INFO)
@@ -55,7 +57,7 @@ def predict():
     """
 
     try:
-        clf = joblib.load("boston_housing_prediction.joblib")
+        clf = joblib.load("boston_housing_prediction.joblib") [0] [0] # take the first classifier object
     except:
         LOG.info("JSON payload: %s json_payload")
         return "Model not loaded"
@@ -69,4 +71,4 @@ def predict():
     return jsonify({'prediction': prediction})
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=PORT, debug=True)
