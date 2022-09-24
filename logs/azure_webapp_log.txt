@@ -1,0 +1,124 @@
+2022-09-24T11:10:28  No new trace in the past 1 min(s).
+2022-09-24T11:11:08.655Z INFO  - Starting container for site
+
+2022-09-24T11:11:08.664Z INFO  - docker run -d --expose=8000 --name ik-udes-proj6_1_d3c15027 -e WEBSITE_SITE_NAME=ik-udes-proj6 -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=ik-udes-proj6.azurewebsites.net -e WEBSITE_INSTANCE_ID=563c37ac676fa4ffd9a7c155c45b2f8e76d71158c743c166463bf8d26da70a26 -e HTTP_LOGGING_ENABLED=1 -e WEBSITE_USE_DIAGNOSTIC_SERVER=True appsvc/python:3.7_20220817.3.tuxprod  
+
+
+
+2022-09-24T11:11:15.106Z INFO  - Initiating warmup request to container ik-udes-proj6_1_d3c15027 for site ik-udes-proj6
+
+2022-09-24 11:11:29,609  [MainThread] [DEBUG] : Initializating AppServiceAppLogging 
+
+2022-09-24 11:11:29,614  [MainThread] [DEBUG] : Initialized AppServiceAppLogging
+
+2022-09-24 11:11:29,621  [Thread-1  ] [DEBUG] : Did not find any previously bound socket
+
+2022-09-24T11:11:39.457Z INFO  - Container ik-udes-proj6_1_d3c15027 for site ik-udes-proj6 initialized successfully and is ready to serve requests.
+
+[2022_09_24_11_11_39] [appsvc_profiler.installer] [INFO] Code Profiler Installer is starting up
+
+[2022_09_24_11_11_39] [appsvc_profiler.installer] [INFO] Cleaning up any existing status file which indicated signal handlers initialized status
+
+[2022_09_24_11_11_39] [appsvc_profiler.installer] [INFO] Attempting to delete the signal_handler status file for instance id 563c37ac676fa4ffd9a7c155c45b2f8e76d71158c743c166463bf8d26da70a26
+
+[2022_09_24_11_11_39] [appsvc_profiler.installer] [INFO] successfully deleted the status file
+
+[2022_09_24_11_11_39] [appsvc_profiler.installer] [DEBUG] APPSETTING_WEBSITE_ENABLE_DEFAULT_CODE_PROFILER : None
+
+[2022_09_24_11_11_39] [appsvc_profiler.installer] [INFO] Attempting to install the default code profiler.
+
+[2022_09_24_11_11_39] [appsvc_profiler.installer] [DEBUG] viztracer would save traces to /tmp/563c37_profiler_trace.json
+
+[2022_09_24_11_11_39] [appsvc_profiler.installer] [INFO] Successfully installed code profiler.
+
+[2022_09_24_11_11_39] [appsvc_profiler.installer] [INFO] Signal Handlers SIGUSR for needed code-profiler have been initialized for gunicorn process on instance 563c37ac676fa4ffd9a7c155c45b2f8e76d71158c743c166463bf8d26da70a26
+
+[2022_09_24_11_11_39] [appsvc_profiler.installer] [DEBUG] Code Profiler Installer is exiting as installation is completed
+
+2022-09-24T11:11:12.941405875Z 
+
+2022-09-24T11:11:12.941458573Z   _____                               
+
+2022-09-24T11:11:12.941467773Z   /  _  \ __________ _________   ____  
+
+2022-09-24T11:11:12.941474673Z  /  /_\  \___   /  |  \_  __ \_/ __ \ 
+
+2022-09-24T11:11:12.941481473Z /    |    \/    /|  |  /|  | \/\  ___/ 
+
+2022-09-24T11:11:12.941487873Z \____|__  /_____ \____/ |__|    \___  >
+
+2022-09-24T11:11:12.941494672Z         \/      \/                  \/ 
+
+2022-09-24T11:11:12.941500872Z 
+
+2022-09-24T11:11:12.941506472Z A P P   S E R V I C E   O N   L I N U X
+
+2022-09-24T11:11:12.941512572Z 
+
+2022-09-24T11:11:12.941518272Z Documentation: http://aka.ms/webapp-linux
+
+2022-09-24T11:11:12.941524172Z Python 3.7.12
+
+2022-09-24T11:11:12.941705167Z Note: Any data outside '/home' is not persisted
+
+2022-09-24T11:11:14.753275070Z Starting OpenBSD Secure Shell server: sshd.
+
+2022-09-24T11:11:14.806206732Z App Command Line not configured, will attempt auto-detect
+
+2022-09-24T11:11:15.291830838Z Starting periodic command scheduler: cron.
+
+2022-09-24T11:11:15.293204404Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -bindPort 8000
+
+2022-09-24T11:11:15.569317468Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+
+2022-09-24T11:11:15.587588230Z Build Operation ID: |RVyYRAiEDgY=.5db82d56_
+
+2022-09-24T11:11:15.590497531Z Oryx Version: 0.2.20220308.4, Commit: c92fa6a2d6fc14dc9646f80e2bb2e393a5cdc258, ReleaseTagName: 20220308.4
+
+2022-09-24T11:11:15.591070270Z Output is compressed. Extracting it...
+
+2022-09-24T11:11:15.597441810Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8da9e1cffd2de0a'...
+
+2022-09-24T11:11:26.956212556Z App path is set to '/tmp/8da9e1cffd2de0a'
+
+2022-09-24T11:11:27.487208907Z Detected an app based on Flask
+
+2022-09-24T11:11:27.488066997Z Generating `gunicorn` command for 'app:app'
+
+2022-09-24T11:11:27.538623966Z Writing output script to '/opt/startup/startup.sh'
+
+2022-09-24T11:11:28.019866726Z Using packages from virtual environment antenv located at /tmp/8da9e1cffd2de0a/antenv.
+
+2022-09-24T11:11:28.019905531Z Updated PYTHONPATH to ':/opt/startup/app_logs:/opt/startup/code_profiler:/tmp/8da9e1cffd2de0a/antenv/lib/python3.7/site-packages'
+
+2022-09-24T11:11:29.592247863Z [2022-09-24 11:11:29 +0000] [81] [INFO] Starting gunicorn 20.1.0
+
+2022-09-24T11:11:29.616501387Z [2022-09-24 11:11:29 +0000] [81] [INFO] Listening at: http://0.0.0.0:8000 (81)
+
+2022-09-24T11:11:29.616544192Z [2022-09-24 11:11:29 +0000] [81] [INFO] Using worker: sync
+
+2022-09-24T11:11:29.649100280Z [2022-09-24 11:11:29 +0000] [87] [INFO] Booting worker with pid: 87
+
+2022-09-24T11:11:39.431118435Z 169.254.129.1 - - [24/Sep/2022:11:11:39 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+
+
+
+2022-09-24T11:12:10.592464589Z /tmp/8da9e1cffd2de0a/antenv/lib/python3.7/site-packages/sklearn/ensemble/gradient_boosting.py:34: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+
+2022-09-24T11:12:10.592553495Z Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+2022-09-24T11:12:10.592565995Z   from ._gradient_boosting import predict_stages
+
+2022-09-24T11:12:10.592574396Z /tmp/8da9e1cffd2de0a/antenv/lib/python3.7/site-packages/sklearn/ensemble/gradient_boosting.py:34: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+
+2022-09-24T11:12:10.592583896Z Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+2022-09-24T11:12:10.592591997Z   from ._gradient_boosting import predict_stages
+
+2022-09-24T11:12:10.592599397Z [2022-09-24 11:12:10,560] INFO in app: JSON payload: %s json_payload
+
+2022-09-24T11:12:10.637966316Z [2022-09-24 11:12:10,637] INFO in app: inference payload DataFrame: %s inference_payload
+
+2022-09-24T11:12:10.638675360Z [2022-09-24 11:12:10,637] INFO in app: Scaling Payload: %s payload
+
+2022-09-24T11:12:10.730573569Z 169.254.129.1 - - [24/Sep/2022:11:12:10 +0000] "POST /predict HTTP/1.1" 200 37 "-" "curl/7.78.0"
