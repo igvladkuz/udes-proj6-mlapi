@@ -14,7 +14,7 @@ variables:
   webAppName: 'ik-udes-proj6'
 
   # Environment name
-  environmentName: 'flask-ml-service'
+  environmentName: 'ik-udes-proj6'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
