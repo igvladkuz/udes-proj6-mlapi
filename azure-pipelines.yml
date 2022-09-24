@@ -24,7 +24,7 @@ stages:
   displayName: Build stage
   jobs:
   - job: BuildJob
-    pool: myAgentPool
+    pool: ik-devops-agent-pool
     steps:    
     - script: |
         python3.7 -m pip install --upgrade pip
