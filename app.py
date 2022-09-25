@@ -1,12 +1,30 @@
+import logging
 from flask import Flask, request, jsonify
 from flask.logging import create_logger
-import logging
 
 import pandas as pd
 import joblib
 from sklearn.preprocessing import StandardScaler
 
+__doc__ = """
+This module implements a API based on Flask to perform a real-time inference
+for a ML model
+
+Use /predict route to call the service
+
+Example JSON payload:
+{
+  "CHAS":{"0":0},
+  "RM":{"0":6.575},
+  "TAX":{"0":296.0},
+  "PTRATIO":{"0":15.3},
+  "B":{"0":396.9},
+  "LSTAT":{"0":4.98}
+}
+"""
+
 PORT = 8000
+MODELS_FILE = "boston_housing_prediction.joblib"
 
 app = Flask(__name__)
 LOG = create_logger(app)
@@ -22,16 +40,21 @@ def scale(payload):
 
 @app.route("/")
 def home():
+    """
+    Base route handler: Service main page
+    """
     html = "<h3>Sklearn Prediction Home</h3>"
     return html.format(format)
 
 # TO DO:  Log out the prediction value
 @app.route("/predict", methods=['POST'])
 def predict():
-    """Performs an sklearn prediction
+    """
+    Performs an sklearn prediction
 
-    input looks like:
-            {
+    input: dictionary
+    example:
+    {
     "CHAS":{
       "0":0
     },
@@ -51,16 +74,18 @@ def predict():
        "0":4.98
     }
 
-    result looks like:
+    result: dictionary
+    example:
     { "prediction": [ 20.35373177134412 ] }
 
     """
 
     try:
-        clf = joblib.load("boston_housing_prediction.joblib") [0] [0] # take the first classifier object
-    except:
+        models = joblib.load(MODELS_FILE)
+        clf = models[0][0] # take the first classifier object
+    except BaseException as ex:
         LOG.info("JSON payload: %s json_payload")
-        return "Model not loaded"
+        raise ex
 
     json_payload = request.json
     LOG.info("JSON payload: %s json_payload")
