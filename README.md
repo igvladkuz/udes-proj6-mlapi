@@ -1,12 +1,14 @@
 # Overview
 
-<TODO: complete this with an overview of your project>
+Building a CI/CD Pipeline using Github Actions and Azure DevOps
 
 ## Project Plan
-<TODO: Project Plan
 
-* A link to a Trello board for the project
-* A link to a spreadsheet that includes the original and final project plan>
+Trello board:
+https://trello.com/b/2qCDDDQJ/udacity-cicd-demo-project
+
+Spreadsheet with project plan:
+https://docs.google.com/spreadsheets/d/1Xmz1K1wm1weUYH9r0ylpOTM7_h-G_x2nS0wN6I9tojY/edit?usp=sharing
 
 ## Instructions
 
@@ -27,7 +29,7 @@
 
 * Running Azure App Service from Azure Pipelines automatic deployment
 
-* Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
+* Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](make_predict_azure_app.sh).
 The output should look similar to this:
 
 ```bash
@@ -38,11 +40,14 @@ Port: 443
 
 * Output of streamed log files from deployed application
 
-> 
+> see file logs/azure_webapp_log.txt
 
 ## Enhancements
 
-<TODO: A short description of how to improve the project in the future>
+1. Write unit tests
+2. Add authentication
+3. Log requests by users
+4. Improve performance
 
 ## Demo 
 
