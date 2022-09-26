@@ -2,7 +2,7 @@ import logging
 from flask import Flask, request, jsonify
 from flask.logging import create_logger
 
-import pandas as pd
+# import pandas as pd
 import joblib
 from sklearn.preprocessing import StandardScaler
 
@@ -89,7 +89,9 @@ def predict():
 
     json_payload = request.json
     LOG.info("JSON payload: %s json_payload")
-    inference_payload = pd.DataFrame(json_payload)
+    # inference_payload = pd.DataFrame(json_payload) # getting rid of the heavyweight pandas dependency
+    # assuming one instance per inference call
+    inference_payload = [[ list(json_payload[k].values())[0] for k in json_payload.keys() ]]
     LOG.info("inference payload DataFrame: %s inference_payload")
     scaled_payload = scale(inference_payload)
     prediction = list(clf.predict(scaled_payload))
