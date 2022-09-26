@@ -67,21 +67,20 @@ stages:
       runOnce:
         deploy:
           steps:
-            - task: UsePythonVersion@0
-              displayName: 'Use Python Version'
-              inputs:
-                versionSpec: '$(pythonVersion)'
-
             - task: AzureWebApp@1
-              displayName: 'Deploy Azure Webapp'
               inputs:
-                azureSubscription: $(azureServiceConnectionId)
-                appName: $(webAppName)
+                appType: 'webAppLinux'
+                appName:  $(webAppName)
                 package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
+                runtimeStack: 'PYTHON:3.7'
+            # - task: UsePythonVersion@0
+            #   displayName: 'Use Python Version'
+            #   inputs:
+            #     versionSpec: '$(pythonVersion)'
 
-# - task: AzureWebApp@1
-#   inputs:
-#     appType: 'webAppLinux'
-#     appName: 'ik-udes-proj6'
-#     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
-#     runtimeStack: 'PYTHON:3.7'
+            # - task: AzureWebApp@1
+            #   displayName: 'Deploy Azure Webapp'
+            #   inputs:
+            #     azureSubscription: $(azureServiceConnectionId)
+            #     appName: $(webAppName)
+            #     package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
