@@ -40,6 +40,7 @@ stages:
       displayName: 'Install'
 
     - script: |
+        source activate venv/bin/activate
         make install
         make lint
       workingDirectory: $(projectRoot)
