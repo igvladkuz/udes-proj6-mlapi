@@ -8,7 +8,7 @@ pool: ik-devops-agent-pool
 
 variables:
   # Azure Service connection name as used in the DevOps project settings
-  azureServiceConnectionId: 'df56a173-611b-429d-901a-af369d7d59b5'
+  azureServiceConnectionId: '2e604e03-94c7-4619-b6e3-6159762ba4ab'
   
   # Existing Web App name
   webAppName: 'ik-udes-proj6'
