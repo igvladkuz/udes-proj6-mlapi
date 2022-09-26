@@ -89,7 +89,8 @@ def predict():
 
     json_payload = request.json
     LOG.info("JSON payload: %s json_payload")
-    # inference_payload = pd.DataFrame(json_payload) # getting rid of the heavyweight pandas dependency
+    # getting rid of the heavyweight pandas dependency
+    # inference_payload = pd.DataFrame(json_payload)
     # assuming one instance per inference call
     inference_payload = [[ list(json_payload[k].values())[0] for k in json_payload.keys() ]]
     LOG.info("inference payload DataFrame: %s inference_payload")

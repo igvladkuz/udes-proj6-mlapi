@@ -41,8 +41,7 @@ stages:
 
     - script: |
         source activate venv/bin/activate
-        make install
-        make lint
+        pylint ./*.py
       workingDirectory: $(projectRoot)
       displayName:  'Run lint tests'
 
