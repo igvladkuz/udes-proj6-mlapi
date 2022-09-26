@@ -69,6 +69,7 @@ stages:
           steps:
             - task: AzureWebApp@1
               inputs:
+                azureSubscription: $(azureServiceConnectionId)
                 appType: 'webAppLinux'
                 appName:  $(webAppName)
                 package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
