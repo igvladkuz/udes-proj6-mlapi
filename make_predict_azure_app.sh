@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
-APPNAME="ik-udes-proj6"
+APPNAME=$1 # "ik-udes-proj6"
 PORT=443
-echo "Port: $PORT"
+echo "App name: $1"
+
+echo "Calling service  https://$APPNAME.azurewebsites.net:$PORT"
 
 # POST method predict
 curl -d '{
