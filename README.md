@@ -1,3 +1,5 @@
+[![Python Web API test with Github Actions](https://github.com/igvladkuz/udes-proj6-mlapi/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/igvladkuz/udes-proj6-mlapi/actions/workflows/pythonapp.yml)
+
 # Overview
 
 Building a CI/CD Pipeline using Github Actions and Azure DevOps
