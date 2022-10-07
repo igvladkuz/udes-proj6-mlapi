@@ -1,5 +1,5 @@
 # Manually (re)deploy project as Azure Webapp
-az webapp up --name ik-udes-proj6 --resource-group Azuredevops --runtime "PYTHON:3.7"
+az webapp up --name ik-udes-proj6 --resource-group Learn --runtime "PYTHON:3.7"
 
 # Stream application logs
 az webapp log tail --name ik-udes-proj6 --resource-group Azuredevops

@@ -54,24 +54,13 @@ def predict():
 
     input: dictionary
     example:
-    {
-    "CHAS":{
-      "0":0
-    },
-    "RM":{
-      "0":6.575
-    },
-    "TAX":{
-      "0":296.0
-    },
-    "PTRATIO":{
-       "0":15.3
-    },
-    "B":{
-       "0":396.9
-    },
-    "LSTAT":{
-       "0":4.98
+    { 
+    "CHAS": { "0":0 },
+    "RM": { "0":6.575 },
+    "TAX":{ "0":296.0 },
+    "PTRATIO":{ "0":15.3 },
+    "B":{ "0":396.9 },
+    "LSTAT":{ "0":4.98 }
     }
 
     result: dictionary
@@ -89,9 +78,6 @@ def predict():
 
     json_payload = request.json
     LOG.info("JSON payload: %s json_payload")
-    # getting rid of the heavyweight pandas dependency
-    # inference_payload = pd.DataFrame(json_payload)
-    # assuming one instance per inference call
     inference_payload = [[ list(json_payload[k].values())[0] for k in json_payload.keys() ]]
     LOG.info("inference payload DataFrame: %s inference_payload")
     scaled_payload = scale(inference_payload)
