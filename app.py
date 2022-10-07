@@ -54,7 +54,7 @@ def predict():
 
     input: dictionary
     example:
-    { 
+    {
     "CHAS": { "0":0 },
     "RM": { "0":6.575 },
     "TAX":{ "0":296.0 },
